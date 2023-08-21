@@ -1,0 +1,83 @@
+{% extends 'core/Base.html' %}
+{% block title %} Contacto {% endblock %}
+{% block background %}{% load static %}{% static 'core/imagenes/herramientas.jpg' %}{% endblock %}
+
+{% block headers %}
+    <link href="{% static 'core/css/Estilocontacto.css' %}"  rel="stylesheet">
+    <h1>Contacto</h1>
+{% endblock %}
+{% block content %}
+
+<div class="container_bg">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="contact-form">
+                <div class="content-box">
+                    <h3>Formulario de Contacto</h3>
+                    <form>
+                        <div>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div>
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div>
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" required></textarea>
+                        </div>
+
+                        <button type="submit">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div class="content-box">
+                    <h3>Encuéntranos en el mapa</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8758421473644!2d-80.46355198518764!3d-1.0520199992103893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e6e14db7a38925%3A0x650eef6e260d9df9!2sPortoviejo%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1631744003219!5m2!1sen!2sus"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <div class="content-box">
+                    <h3>Síguenos en redes sociales</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://www.twitter.com">Twitter</a></li>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-list">
+                <div class="content-box">
+                    <h3>Preguntas frecuentes</h3>
+                    <ul>
+                        
+                            <div class="content-box"><li>
+                                <h4>¿Cuál es el costo de los servicios?</h4>
+                                <p>El costo de los servicios varía dependiendo del tipo de asesoría que necesites. Te invitamos a contactarnos para obtener más información.</p>
+                            </div></li>
+                        
+                            <div class="content-box"><li>
+                                <h4>¿Cuánto tiempo tardan en responder los mensajes?</h4>
+                                <p>Nos esforzamos por responder los mensajes lo más pronto posible. Generalmente, recibirás una respuesta en un plazo de 24 a 48 horas.</p>
+                            </div></li>
+                        
+                            <div class="content-box"><li>
+                                <h4>¿Ofrecen asesoría en línea?</h4>
+                                <p>Sí, ofrecemos asesoría en línea para aquellas personas que no pueden acudir de forma presencial.</p>
+                            </div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

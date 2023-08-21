@@ -1,0 +1,26 @@
+{% extends 'core/Base.html' %}
+{% block title%}PRODUCTOS{% endblock %}
+<!--Background-->
+{% block background %}{% load static %}{% static 'core/imagenes/imagen1.jpg' %}{% endblock %}
+
+<!--Cabecera-->
+{% block headers %}
+    <h1>PRODUCTOS</h1>
+    <span class="subheading">Currículo</span>
+{%endblock%}
+<!--Content-->
+{% block content %}
+{% for producto in products %} <!--prodcuto no es mas que una variable para referenciar los campos del modelo-->
+	<!-- Proyecto -->
+	<div class="row project">  	
+		<div class="col-lg-3 col-md-4 offset-lg-1">
+			<img class="img-fluid" src="{{ producto.image.url }}" alt="">
+		</div>
+		<div class="col-lg-7 col-md-8">
+			<h2 class="section-heading title">{{ producto.title }}</h2>   
+		<p>{{ producto.description }}</p>
+		</div>
+	</div>
+	</div>
+	{%endfor%}
+{% endblock %}

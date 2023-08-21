@@ -1,0 +1,42 @@
+{% extends 'core/Base.html'%}
+{% block title%}Menú{% endblock %}
+<!--Background-->
+{% block background %}{% load static %}{% static 'core/imagenes/escolar-bg.jpg' %}{% endblock %}
+
+<!--Cabecera-->
+{% block headers %}
+    <h1>Bienvenido a SchoolStore</h1>
+    <span class="subheading">
+        Aquí podrá obtener todos los productos de la mejor calidad
+    </span>
+    
+{%endblock%}
+<!--Content-->
+{% block content %}
+    <div class="container2">
+        <div class="box">
+            <h2 = class="img_titles">LAPICES</h2>
+            <img src="{% static 'core/imagenes/img_lapices.jpg' %}" height="233px" width="300px"alt="">
+        </div>
+        <div class="box">
+            <h2 = class="img_titles">CUADERNOS</h2>
+            <img src="{% static 'core/imagenes/img_cuadernos.jpg' %} " height="233px" width="300px" alt="">
+        </div>
+        <div class="box">
+            <h2 = class="img_titles">CARTUCHERAS</h2>
+            <img src="{% static 'core/imagenes/img_cartucheras.jpg' %}" height="233px" width="300px" alt="">
+        </div>
+    </div>
+
+    <div class="contacto">
+        <div class="contenedor">
+            <a href="{% url 'contact' %}">
+                <button class="btn btn1">
+                    Para más Información
+                </button>
+            </a>
+           </div> 
+    </div>
+
+{% endblock %}
+
